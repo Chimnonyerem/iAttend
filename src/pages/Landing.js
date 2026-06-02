@@ -49,7 +49,7 @@ export default function Landing({ onAuth }) {
         <div style={{ position:"absolute", bottom:-60, left:-60, width:220, height:220, borderRadius:"50%", background:"rgba(255,255,255,0.06)" }} />
 
         <div style={{ position:"relative", zIndex:1 }}>
-          <div style={{ fontSize:34, fontWeight:800, color:"#fff", fontFamily:"'Syne',sans-serif", marginBottom:8 }}>iAttend</div>
+          <div style={{ fontSize:34, fontWeight:800, color:"#fff", fontFamily:"'Syne',sans-serif", marginBottom:8 }}>VeryPresent</div>
           <div style={{ width:40, height:3, background:"rgba(255,255,255,0.5)", borderRadius:2, marginBottom:32 }} />
           <h2 style={{ fontSize:40, fontWeight:700, color:"#fff", lineHeight:1.2, marginBottom:20, fontFamily:"'Syne',sans-serif" }}>
             Track your<br/>attendance<br/>with ease.

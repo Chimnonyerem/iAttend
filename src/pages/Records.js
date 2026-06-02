@@ -60,7 +60,7 @@ export default function Records({ orgId }) {
     ws["!cols"] = [{ wch:30 },{ wch:15 },{ wch:12 },{ wch:10 }];
     const wb = XLSX.utils.book_new();
     XLSX.utils.book_append_sheet(wb, ws, "Attendance");
-    XLSX.writeFile(wb, `iAttend_${selectedDate}.xlsx`);
+    XLSX.writeFile(wb, `VeryPresent_${selectedDate}.xlsx`);
   };
 
   const absentMembers = members.filter(m => !records.find(r => r.memberId===m.id));

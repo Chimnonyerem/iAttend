@@ -152,7 +152,7 @@ function Sidebar({ page, setPage, orgName, onSignOut }) {
             fontSize: 16, fontWeight: 800, color: "#fff", fontFamily: "var(--font-display)",
             boxShadow: "0 3px 10px rgba(255,107,53,0.35)"
           }}>i</div>
-          <span style={{ fontSize: 20, fontWeight: 800, color: "var(--text)", fontFamily: "var(--font-display)", letterSpacing: -0.5 }}>Attend</span>
+          <span style={{ fontSize: 20, fontWeight: 800, color: "var(--text)", fontFamily: "var(--font-display)", letterSpacing: -0.5 }}>VeryPresent</span>
         </div>
       </div>
 
@@ -261,7 +261,7 @@ export default function App() {
       {authLoading && (
         <div style={{ minHeight:"100vh", display:"flex", alignItems:"center", justifyContent:"center", background:"var(--bg)" }}>
           <div style={{ textAlign:"center" }}>
-            <div style={{ fontSize:32, fontWeight:800, color:"var(--orange)", fontFamily:"var(--font-display)", marginBottom:16 }}>iAttend</div>
+            <div style={{ fontSize:32, fontWeight:800, color:"var(--orange)", fontFamily:"var(--font-display)", marginBottom:16 }}>VeryPresent</div>
             <div className="loader" style={{ margin:"0 auto" }} />
           </div>
         </div>
