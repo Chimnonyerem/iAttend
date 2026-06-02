@@ -117,7 +117,6 @@
 //   );
 // }
 
-
 import React, { useState, useEffect } from "react";
 import { db } from "../firebase";
 import { collection, getDocs } from "firebase/firestore";
@@ -125,7 +124,6 @@ import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, LineChart, L
 
 export default function Analytics({ orgId }) {
   const [data, setData] = useState([]);
-  const [memberCount, setMemberCount] = useState(0);
   const [loading, setLoading] = useState(true);
   const [topAttendees, setTopAttendees] = useState([]);
 
@@ -135,7 +133,6 @@ export default function Analytics({ orgId }) {
       try {
         const membersSnap = await getDocs(collection(db, `organizations/${orgId}/members`));
         const memberList = membersSnap.docs.map(d => ({ id: d.id, ...d.data() }));
-        setMemberCount(memberList.length);
         const attendanceSnap = await getDocs(collection(db, `organizations/${orgId}/attendance`));
         const sessions = attendanceSnap.docs.sort((a, b) => a.id.localeCompare(b.id));
         const chartData = sessions.map(s => {
