@@ -4,13 +4,12 @@ import { getAuth } from "firebase/auth";
 import { getStorage } from "firebase/storage";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDzN1TWU_sWdd7_AxbMcvlvjEzKYKiOVUg",
-  authDomain: "nifes-fuhso-check-in.firebaseapp.com",
-  projectId: "nifes-fuhso-check-in",
-  storageBucket: "nifes-fuhso-check-in.firebasestorage.app",
-  messagingSenderId: "862375541759",
-  appId: "1:862375541759:web:eaebc464f93afb4f89c5ca",
-  measurementId: "G-PSJJHG8DMV"
+  apiKey: "AIzaSyCnPS39fZuYt8N9mwIhW1d0mY6O6BZRPmc",
+  authDomain: "vpresent.firebaseapp.com",
+  projectId: "vpresent",
+  storageBucket: "vpresent.firebasestorage.app",
+  messagingSenderId: "419510496963",
+  appId: "1:419510496963:web:5f060f268b494c409f7c76"
 };
 
 const app = initializeApp(firebaseConfig);
