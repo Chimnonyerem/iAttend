@@ -267,6 +267,7 @@
 // }
 
 import React, { useState, useEffect } from "react";
+import ReactDOM from "react-dom";
 import { db } from "../firebase";
 import { collection, getDocs, writeBatch, doc, deleteDoc, updateDoc } from "firebase/firestore";
 import Papa from "papaparse";
@@ -325,14 +326,14 @@ function EditModal({ member, onSave, onClose }) {
     setSaving(false);
   };
 
-  return (
+  return ReactDOM.createPortal(
     <div style={{
-      position:"fixed", inset:0, background:"rgba(0,0,0,0.45)", zIndex:1000,
+      position:"fixed", inset:0, background:"rgba(0,0,0,0.45)", zIndex:9999,
       display:"flex", alignItems:"center", justifyContent:"center", padding:20
     }} onClick={onClose}>
       <div onClick={e => e.stopPropagation()} style={{
-        background:"var(--surface)", borderRadius:16, padding:28,
-        width:"100%", maxWidth:480, boxShadow:"0 8px 40px rgba(0,0,0,0.18)"
+        background:"#fff", borderRadius:16, padding:28,
+        width:"100%", maxWidth:480, boxShadow:"0 8px 40px rgba(0,0,0,0.25)"
       }}>
         <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center", marginBottom:20 }}>
           <div style={{ fontSize:16, fontWeight:700, color:"var(--text)" }}>Edit Member</div>
@@ -374,7 +375,8 @@ function EditModal({ member, onSave, onClose }) {
           <button className="btn-ghost" onClick={onClose} style={{ padding:"11px 20px" }}>Cancel</button>
         </div>
       </div>
-    </div>
+    </div>,
+    document.body
   );
 }
 
